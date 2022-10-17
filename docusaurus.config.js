@@ -36,6 +36,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           showLastUpdateTime: true
           // Please change this to your repo.
@@ -70,6 +71,8 @@ const config = {
         logo: {
           alt: 'Gary Liao\'s site Logo',
           src: 'img/logo.svg',
+          href: '/intro',
+          target: '_self'
         },
         items: [
           // 左側選項
