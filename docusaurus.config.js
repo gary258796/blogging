@@ -112,7 +112,7 @@ const config = {
               },
               {
                 label: 'LinkedIn',
-                href: 'www.linkedin.com/in/garyliao',
+                href: 'https://www.linkedin.com/in/garyliao',
               }
             ],
           },
