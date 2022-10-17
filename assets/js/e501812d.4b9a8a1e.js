@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkgary_blog=self.webpackChunkgary_blog||[]).push([[113],{2769:a=>{a.exports=JSON.parse('{"label":"Cache","permalink":"/blogging/docs/tags/cache","allTagsPath":"/blogging/docs/tags","count":1,"items":[{"id":"Http/Cache/index","title":"Http Cache","description":"http cache machanism","permalink":"/blogging/docs/Http/Cache/"}]}')}}]);
