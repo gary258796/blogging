@@ -11,7 +11,7 @@ const config = {
   title: 'Gary Liao\'s Blog',
   tagline: 'My site for personal blogging and taking notes.',
   url: 'https://gary258796.github.io',
-  baseUrl: '/',
+  baseUrl: '/blogging/',
   onBrokenLinks: 'log',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
