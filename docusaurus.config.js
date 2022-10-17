@@ -10,7 +10,7 @@ require('dotenv').config();
 const config = {
   title: 'Gary Liao\'s Blog',
   tagline: 'My site for personal blogging and taking notes.',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://gary258796.github.io',
   baseUrl: '/',
   onBrokenLinks: 'log',
   onBrokenMarkdownLinks: 'warn',
