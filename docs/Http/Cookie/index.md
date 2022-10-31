@@ -33,8 +33,8 @@ SameSite 屬性是 Http response header : **Set-Cookie** 的屬性。  透過此
 
 在 Android 12 開始，開發者需要依照需求設定 cookie 之 samesite 政策。 Samesite 提供三種值給我們設定。
 
-1. Strict : 只允許 Cookie 被帶入同網域之請求之中。
-2. Lax(Default) : 只允許 Cookie 被帶入同網域之請求之中，以及像是從其他網站使用 <link> 訪問和 Cookie 同 domain 之網址時。
+1. Strict : 只允許 Cookie 被帶入同網域之請求之中。  
+2. Lax(Default) : 只允許 Cookie 被帶入同網域之請求之中，以及像是從其他網站使用 \<link\> 訪問和 Cookie 同 domain 之網址時。
 3. None : 允許所有同網域、跨網域之請求。必須搭配 Secure 屬性一同使用。
 
 ## 透過 Chrome 查看網站 Cookie 是否有被 SameSite 影響
