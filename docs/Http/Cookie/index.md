@@ -1,5 +1,5 @@
 ---
-title: [headers] Set-Cookie - SameSite
+title: "[headers] Set-Cookie - SameSite"
 keywords: [http, headers, cookies, samesite]
 description: cookies new attribute samesite
 tags: [Http, Cookies, attribute]
