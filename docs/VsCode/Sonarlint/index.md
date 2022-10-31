@@ -39,13 +39,13 @@ last_update:
 ---
 1. Vs code -> market place 下載 SonarLint
    
-   <img src="images/VSCode_SonarLint_Extension.png"/>   
+   <img src="./images/VSCode_SonarLint_Extension.png"/>   
 2. 完成後，在Vs code -> Explorer下方可看到 *SONARLINT RULES*   
 
     > 📘 Hint   
     > 這些*RULES*為當我們還未為專案設定連結對應到SonarQube/SonarCloud server上的專案之前，SonarLint會自動使用這邊顯示的Rules檢查專案程式碼。可依照個人喜好開啟或關閉每一個Rule.
 
-    <img src="images/VSCode_SonarLint_rules.png"/>   
+    <img src="./images/VSCode_SonarLint_rules.png"/>   
 3. 這時即可以在專案內看到SonarLint為不符合規則之程式碼加上波浪底線提示我們
 
    a. 這邊先在Local將TypeScript其中一條規則啟用。   
@@ -56,7 +56,7 @@ last_update:
       2. 下方Problem頁面裡也會顯示目前SonarLint偵測到的所有錯誤，並且會依照檔案區分。
       3. 在提示選擇Show Problem後會開啟細節描述以及提供建議修改方向。  
     <br />
-    <img src="images/VSCode_SonarLint_hint.png"/>   
+    <img src="./images/VSCode_SonarLint_hint.png"/>   
 
 <br/>  
 
@@ -78,17 +78,17 @@ last_update:
    Default URL: http://localhost:9000     
    Default Account and Password : admin/admin
 
-   <img src="images/SonarQube_Main_Page.png"/>   
+   <img src="./images/SonarQube_Main_Page.png"/>   
 
 3. 創建Token，稍後設定專案連結SonarQube上專案時會用到。讓我們的帳號資訊不需暴露在專案檔案裡面。
 
     右上角 Administrator -> My Account -> Security -> Generate Tokens  
     
-    <img src="images/Right_Top_Corner_Administrator.png"/><br/>     
+    <img src="./images/Right_Top_Corner_Administrator.png"/><br/>     
 
     將 <span id="getToken">**產生之Token**</span> 記錄起來。
 
-    <img src="images/Generated_Token.png"/><br/>   
+    <img src="./images/Generated_Token.png"/><br/>   
 
 4. 創建Project
 
@@ -109,7 +109,7 @@ last_update:
 
     a. 下載ZIP
         在上一步驟選擇完OS後，下方SonarQube會跳出如下圖畫面提供要執行之command line指令。   
-            <img src="images/SonarQube_Create_project_autoGen_command.png"/>   
+            <img src="./images/SonarQube_Create_project_autoGen_command.png"/>   
 
     b. 使用Docker Image，可參考[SonarScanner設定下載頁面][sonarScanner]之docker run command。
         
@@ -126,7 +126,7 @@ last_update:
 
 6. 成功後，頁面會自動刷新並顯示結果。
 
-    <img src="images/SonarQube_Scan_result.png"/>   
+    <img src="./images/SonarQube_Scan_result.png"/>   
    
 <div id='use_Own_rules'/> 
 
@@ -138,10 +138,10 @@ last_update:
 
 2. 命名後會帶入到規則明細頁面 -> 點選Activate more
 
-    <img src="images/SonarQube_activateMore.png"/>   
+    <img src="./images/SonarQube_activateMore.png"/>   
 3. 啟用自己想要專案啟用之規則(以"===" and "!==" should be used instead of "==" and "!="為例)
    
-   <img src="images/activate_the_rules.png"/>  
+   <img src="./images/activate_the_rules.png"/>  
 
 <div id='instantly_Scan'/> 
 
@@ -161,7 +161,7 @@ last_update:
 
     設定Vs code上SonarLint的相關設定，點選 *Edit in settings.json*
 
-    <img src="images/SonarLint_Extension_settings.png"/>  
+    <img src="./images/SonarLint_Extension_settings.png"/>  
 
     <br/>   
 2. 在User層級的Settings.json裡加入設定SonarQube host以及token。
@@ -191,14 +191,14 @@ last_update:
 
     輸入SonarLint選擇 *SonarLint: Update all project bindings to SonarQube/SonarCloud*
 
-    <img src="images/SonarLint_Command_Palette.png"/> <br/> 
+    <img src="./images/SonarLint_Command_Palette.png"/> <br/> 
 
     如果設定無誤，這時候Vs code應該會跳出Update成功畫面
 
-    <img src="images/Update Success.png"/><br/>
+    <img src="./images/Update Success.png"/><br/>
 
     這時候查看程式碼，應會就會有如打開local rule的效果了。
-    <img src="images/VSCode_SonarLint_hint.png"/> 
+    <img src="./images/VSCode_SonarLint_hint.png"/> 
     
     
 
