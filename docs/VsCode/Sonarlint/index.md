@@ -1,4 +1,5 @@
 ---
+slug: /vscode/sonarlint
 title: "Sonarlint 安裝設定"
 keywords: [vscode, visual studio, sonarlint, sonarqube]
 description: Download and setting Sonalint on VsCode
