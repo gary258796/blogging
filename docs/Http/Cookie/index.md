@@ -28,7 +28,7 @@ Image Source : [get-ready-for-new-samesitenone-secure](https://lh3.googleusercon
 
 SameSite 屬性是 Http response header : **Set-Cookie** 的屬性。  透過此一屬性控制 Cookie 被限制在同 domain 之程度。
 
-> 根據 [android developer - Modern SameSite cookies in WebView](https://developer.android.com/about/versions/12/behavior-changes-12#samesite) <br>
+> 根據 [android developer - Modern SameSite cookies in WebView](https://developer.android.com/about/versions/12/behavior-changes-12#samesite)  
 > Starting in Android 12, these changes are also included in WebView when apps target Android 12 (API level 31) or higher.
 
 在 Android 12 開始，開發者需要依照需求設定 cookie 之 samesite 政策。 Samesite 提供三種值給我們設定。
