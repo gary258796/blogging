@@ -40,9 +40,9 @@ SameSite 屬性是 Http response header : **Set-Cookie** 的屬性。  透過此
 ## 透過 Chrome 查看網站 Cookie 是否有被 SameSite 影響
 
 從 Chrome 的開發人員工具之中 -> 網路(Network)  
-將 Has Blocked Cookies 選項打勾後，所有因為 SameSite 屬性而未被發送之 Cookies 都會被列在這邊。  <br>
+將 Has Blocked Cookies 選項打勾後，所有因為 SameSite 屬性而未被發送之 Cookies 都會被列在這邊。  <br/>
 
-![Chrome-Developer-tools-blocked-cookies](./images/developertools-blocked-cookies.png)  <br>
+![Chrome-Developer-tools-blocked-cookies](./images/developertools-blocked-cookies.png)  <br/>
 
 如果使用的 Chrome 還未嚴格要求使用 SameSite 屬性，會透過 Warning 的方式提醒我們。
 
