@@ -1,5 +1,5 @@
 ---
-title: Http Cache
+title: Cache
 keywords: [http, cache, http cache]
 description: http cache machanism
 tags: [Http, Cache]

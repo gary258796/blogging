@@ -1,5 +1,5 @@
 ---
-title: Cookie - SameSite
+title: [headers] Set-Cookie - SameSite
 keywords: [http, headers, cookies, samesite]
 description: cookies new attribute samesite
 tags: [Http, Cookies, attribute]
@@ -51,6 +51,6 @@ SameSite 屬性是 Http response header : **Set-Cookie** 的屬性。  透過此
 
 
 ### 參考文章
-1. [Aamesite-cookies-explained](https://web.dev/samesite-cookies-explained/)  
+1. [Samesite-cookies-explained](https://web.dev/samesite-cookies-explained/)  
 2. [behavior-changes-12](https://developer.android.com/about/versions/12/behavior-changes-12#samesite)  
 3. [get-ready-for-new-samesitenone-secure](https://developers.google.com/search/blog/2020/01/get-ready-for-new-samesitenone-secure)  
