@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkgary_blog=self.webpackChunkgary_blog||[]).push([[868],{5525:e=>{e.exports=JSON.parse('{"label":"Cookies","permalink":"/blogging/tags/cookies","allTagsPath":"/blogging/tags","count":1,"items":[{"id":"Http/Cookie/index","title":"Cookie - SameSite","description":"cookies new attribute samesite","permalink":"/blogging/Http/Cookie/"}]}')}}]);
