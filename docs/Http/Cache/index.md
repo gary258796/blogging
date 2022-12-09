@@ -103,16 +103,11 @@ Image Source : [Guide for Caching and Http Cache Headers for Static Content] [1]
 2. [from memory cache與from disk cache詳解](https://www.itread01.com/content/1544784485.html)
   
 ### 參考文章
-1. 
-[Guide for Caching and Http Cache Headers for Static Content](https://imagekit.io/blog/ultimate-guide-to-http-caching-for-static-assets/)  
-2.  
-[Expires vs. max-age](https://www.mnot.net/blog/2007/05/15/expires_max-age)  
-3.  
-[Expires Headers for SEO](https://moz.com/blog/expires-headers-for-seo-why-you-should-think-twice-before-using-them)  
-4.  
-[Http Caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching)
-5.  
-[HTTP conditional requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Conditional_requests)
+1. [Guide for Caching and Http Cache Headers for Static Content](https://imagekit.io/blog/ultimate-guide-to-http-caching-for-static-assets/)  
+2.  [Expires vs. max-age](https://www.mnot.net/blog/2007/05/15/expires_max-age)  
+3.  [Expires Headers for SEO](https://moz.com/blog/expires-headers-for-seo-why-you-should-think-twice-before-using-them)  
+4.  [Http Caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching)
+5.  [HTTP conditional requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Conditional_requests)
 6. [Prevent unnecessary network requests with the HTTP Cache](https://web.dev/http-cache/)
 
 
