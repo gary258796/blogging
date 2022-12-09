@@ -21,36 +21,34 @@ Image Source : [A Newbie’s Guide To Creating An EC2 Instance With An Apache Se
   1. 先申請一個 Aws 帳號 (如果已經擁有帳號，可跳過)  
     AWS 提供新帳戶12個月免費，並且提供如 750 小時/每月的 EC2 使用時數...等，詳細免費用量可參考 [AWS 免費安案說明][aws_free_tier]
   
-  2. 我的帳戶 -> 進入 AWS 管理主控台 <br>
-    ![AWS + Apache Web Server](./images/enter_management_console.png)  
-
-  3. 進入 EC2 儀表板
+  2. 我的帳戶 -> 進入 AWS 管理主控台 <br/> ![AWS + Apache Web Server](./images/enter_management_console.png)
+  1. 進入 EC2 儀表板
     ![EC2 Console](./images/ec2_console.png)  
   
-  4. 從左側列表中選取「執行個體」，選擇右上角之「啟動新執行個體」按鈕。
+  2. 從左側列表中選取「執行個體」，選擇右上角之「啟動新執行個體」按鈕。
     ![Create New Ec2 Instance](./images/new_instance.png)  
 
-  5. 給予此 EC2 Instance 一個名稱，我們取名為 EC2 with Apache Web Server (名稱沒有限制，可自行命名)
+  3. 給予此 EC2 Instance 一個名稱，我們取名為 EC2 with Apache Web Server (名稱沒有限制，可自行命名)
     ![Name Your EC2 Instance](./images/ec2_name.png) 
 
-  6. 應用程式和作業作業系統映像檔案 (可依照自己喜好選擇其他作業系統無仿。但後續步驟可能會有些微差異)
+  4. 應用程式和作業作業系統映像檔案 (可依照自己喜好選擇其他作業系統無仿。但後續步驟可能會有些微差異)
      * 收尋 Ubuntu 映像檔案  
       ![Search Ubuntu Image](./images/search_ubuntu_image.png)  
       * 選擇使用 Ubuntu Server 22.04 LTS 
       ![Choose Ubuntu Image](./images/choose_ubuntu_image.png)  
 
-  7. 執行個體類型，選擇使用 t2.micro (預設應該即是此類型)  
+  5. 執行個體類型，選擇使用 t2.micro (預設應該即是此類型)  
     ![t2.micro](./images/t2_micro_instance.png) 
 
-  8. 建立新的金鑰對，給予一個喜愛的名稱，類型選擇 RSA，私有金鑰檔案格式選擇 .pem。  
+  6. 建立新的金鑰對，給予一個喜愛的名稱，類型選擇 RSA，私有金鑰檔案格式選擇 .pem。  
     ![pem key](./images/pem_key.png)  
     建立金鑰對之後，瀏覽器會自動下載一個 pem 檔案，稍後將會使用來讓我們能夠 SSH 進入 EC2 Instance 當中。
 
-  9. 網路設定，建立一個新的安全群組。  
+  7. 網路設定，建立一個新的安全群組。  
      (因為這裡是展示用，我們將所有能夠允許之選項皆勾選。實際使用時，請依照所部署之環境以及資源安全考量設定安全群組之規則提升安全性。)  
     ![pem key](./images/security_group.png)  
 
-  10. 點擊「啟動執行個體」，完成後，將會看到如下圖之畫面。點擊箭頭處查看詳細資訊。  
+  8.  點擊「啟動執行個體」，完成後，將會看到如下圖之畫面。點擊箭頭處查看詳細資訊。  
     ![Instance Created](./images/instance_created.png)  
     ![Instance Detail](./images/ec2_detail.png)  
     
@@ -59,23 +57,23 @@ Image Source : [A Newbie’s Guide To Creating An EC2 Instance With An Apache Se
 
   到這邊我們已經成功啟動一個 Aws EC2 Instance了，接著我們可以試著 SSH 進入 Instance。
 
-  在建立金鑰對之後，瀏覽器為我們下載了一個 .pem 檔案。<br>
+  在建立金鑰對之後，瀏覽器為我們下載了一個 .pem 檔案。<br/>
   我們先開啟 Command Line 並且 cd 到 .pem 檔案所在之目錄下。
 
   這邊我先將我本機的 .pem 檔案命名為 ec2-apache-web-server.pem。
-  <br>
+  <br/>
   並且從上面執行個體中的截圖可查看「公有IPv4地址」得知此 Instance 之 IP。
-  因此，在 Command Line 中輸入<br>   ```ssh -i ec2-apache-web-server.pem ubuntu@18.183.223.11```
+  因此，在 Command Line 中輸入<br/>   ```ssh -i ec2-apache-web-server.pem ubuntu@18.183.223.11```
 
   這時候，Command Line之中可能會出現如下圖之訊息。
   ![pem_file_permission_error](./images/pem_permission.png)  
 
-  其中兩行訊息告訴了我們為何出現此錯誤訊息。<br>
+  其中兩行訊息告訴了我們為何出現此錯誤訊息。<br/>
   ```
   Permissions 0644 for 'ec2-apache-web-server.pem' are too open.
   It is required that your private key files are NOT accessible by others.
   ```
-  原來是因為現在 .pem 檔案所擁有之權限太多了。因此我們只需要透過 chmod 將檔案權限更改成 600即可。<br>
+  原來是因為現在 .pem 檔案所擁有之權限太多了。因此我們只需要透過 chmod 將檔案權限更改成 600即可。<br/>
   ```sudo chmod 600 ec2-apache-web-server.pem```  
 
   這時，再次嘗試執行 SSH 指令，應該即可正常進入到 Instance 之中了。
@@ -125,7 +123,7 @@ Image Source : [A Newbie’s Guide To Creating An EC2 Instance With An Apache Se
   2. 輸入想要的 domain 名稱後選取一個免費的，這邊我們選擇 mycooldomain.ml  
    ![choose_free_domain](./images/choose_free_domain_name.png)  
 
-  3. 點擊 CheckOut 之後，將看到以下畫面。<br>
+  3. 點擊 CheckOut 之後，將看到以下畫面。<br/>
    Use DNS 中 IP Address 輸入彈性 IP，Period 當然是選擇免費中最長之期限啦!   
   ![setting_domain_name](./images/setting_domain_name.png)  
 
@@ -134,11 +132,11 @@ Image Source : [A Newbie’s Guide To Creating An EC2 Instance With An Apache Se
   
 ## 設定 SSL，讓我們能夠使用 Https 訪問我們的網頁
 
-  1. 在 EC2 Instance 上下載 OpenSSL <br>
+  1. 在 EC2 Instance 上下載 OpenSSL <br/>
     ```sudo apt-get install openssl```
-  2. Enable SSL module for Apache<br>
+  2. Enable SSL module for Apache<br/>
     ```sudo a2enmod ssl```
-  3. Restart Apache Web Server <br>
+  3. Restart Apache Web Server <br/>
     ```sudo service apache2 restart```
   4. 產出 CSR (Certificate Signing Request)，將會用來輸入到 SSL 管理中心。  
       ```
@@ -189,7 +187,7 @@ Image Source : [A Newbie’s Guide To Creating An EC2 Instance With An Apache Se
     ![cyber_duck_sftp](./images/cyber_duck_sftp.png)
 
   15. 將下載檔案中的兩個 .crt 檔案上傳至路徑 /etc/ssl 底下
-  16. 編輯 /etc/apache2/sites-available/default-ssl.conf檔案 <br>
+  16. 編輯 /etc/apache2/sites-available/default-ssl.conf檔案 <br/>
       確認檔案之中有以下之內容
       ```
       ServerName mycooldomain.ml
@@ -200,13 +198,13 @@ Image Source : [A Newbie’s Guide To Creating An EC2 Instance With An Apache Se
       SSLCertificateKeyFile /etc/apache2/ssl/website.key
       SSLCertificateChainFile /etc/ssl/ca_bundle.crt
       ```
-  17. Activate SSL virtual Host <br>
+  17. Activate SSL virtual Host <br/>
     ```sudo a2ensite default-ssl.conf```
 
   18. 再確認一次 Apache Module: mod_ssl 已經下載過
     ```sudo a2enmod ssl```
 
-  19. Restart Apache web server <br>
+  19. Restart Apache web server <br/>
     ```sudo service apache2 restart```
 
 ## 修改 index.html 並下載 App
@@ -220,7 +218,7 @@ Image Source : [A Newbie’s Guide To Creating An EC2 Instance With An Apache Se
   3. 重啟 Apache Web Server 後，即可透過網頁下載 App。
     ![app_download_pages](./images/download_pages.png)
    
-<br>
+<br/>
 
 ### 參考文章
 1. [How to Set Up Apache Web Server in AWS EC2 Linux (Ubuntu) Instance](https://www.geeksforgeeks.org/how-to-set-up-apache-web-server-in-aws-ec2-linux-ubuntu-instance/)  
