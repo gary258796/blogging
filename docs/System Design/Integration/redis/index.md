@@ -44,15 +44,15 @@ Redis 是個 in-memory 的資料存儲系統，有低延遲、回應時間快等
 1. 將所有 Sentinel, Master, Slave 節點都安裝在本機上
 	
 
-	1. 在自己機器上，安裝 Redis 。 我自己是 Mac ，所以透過 Brew 指定將 Redis 安裝到我本機上。
-	2. Redis 節點之 Config 檔案請參考  
+	* 在自己機器上，安裝 Redis 。 我自己是 Mac ，所以透過 Brew 指定將 Redis 安裝到我本機上。
+	* Redis 節點之 Config 檔案請參考  
 		* [Redis-Master](./sentinel/instancesAtLocalHost/conf/redis-1.conf)
 		* [Redis-Slave1](./sentinel/instancesAtLocalHost/conf/redis-2.conf)
 		* [Redis-Slave2](./sentinel/instancesAtLocalHost/conf/redis-3.conf)
 		* [Redis-Sentinel1](./sentinel/instancesAtLocalHost/conf/redis-sentinel-1.conf)
 		* [Redis-Sentinel2](./sentinel/instancesAtLocalHost/conf/redis-sentinel-2.conf)
 		* [Redis-Sentinel3](./sentinel/instancesAtLocalHost/conf/redis-sentinel-3.conf)
-	3.  使用 ReadMe 檔案中提供之指令
+	*  使用 ReadMe 檔案中提供之指令
 		[View README](./sentinel/instancesAtLocalHost/readme.txt)
 
 2. 因為在本機一個一個節點啟動太麻煩，所以後來都選擇使用 Docker Compose 之方式，一次將所有需要之節點啟動。
