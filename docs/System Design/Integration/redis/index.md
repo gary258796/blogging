@@ -42,8 +42,6 @@ Redis 是個 in-memory 的資料存儲系統，有低延遲、回應時間快等
 我們總共將會架起 1 Master + 2 Slave 為我們的主從模式之 Redis 節點。並在這個之上架設 3 Sentinel 節點。
 
 1. 將所有 Sentinel, Master, Slave 節點都安裝在本機上
-	
-
 	* 在自己機器上，安裝 Redis 。 我自己是 Mac ，所以透過 Brew 指定將 Redis 安裝到我本機上。
 	* Redis 節點之 Config 檔案請參考  
 		* [Redis-Master](./sentinel/instancesAtLocalHost/conf/redis-1.conf)
